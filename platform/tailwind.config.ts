@@ -81,6 +81,6 @@ const config: Config = {
     { pattern: /flex-+/ },
     { pattern: /gap-+/ },
   ],
-  plugins: [],
+  plugins: [require("daisyui")],
 };
 export default config;
