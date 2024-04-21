@@ -1,10 +1,8 @@
-Short Description
+##Short Description
 
 Our project, "Decentralized Safety Factor Calculation," leverages the Bacalhau compute network to dynamically assess the economic security of blockchain protocols. By integrating real-time data, the system calculates the Cost of Corruption (CoC), Profit from Corruption (PfC), and Safety Factor (SF) to ensure protocols remain robust against potential threats.
 
-Project Summary
-
-Title: Decentralized Safety Factor Calculation on Bacalhau
+##Project Summary
 
 Overview:
 
