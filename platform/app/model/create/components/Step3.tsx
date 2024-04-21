@@ -8,7 +8,6 @@ type Step3Param = {
 
 const Step3 = ({ delayModAddress, onPaymentDone }:Step3Param) => {
     useGnosisChain();
-
     return (
         <GnosisPayErc20Transfer onPaymentDone={onPaymentDone} delayModAddress={delayModAddress} />
     )

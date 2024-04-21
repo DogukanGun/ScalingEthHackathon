@@ -5,12 +5,14 @@ import Step2 from "./components/Step2";
 import Step3 from "./components/Step3";
 import { StepDoneIcon } from "./components/StepDoneIcon";
 import Step4 from "./components/Step4";
+import { useRouter } from "next/navigation";
 
 const CreatePage = () => {
 
-    const [step, setStep] = useState(1)
+    const [step, setStep] = useState(4)
     const [delayModAddress, setDelayModAddress] = useState<`0x${string}`>()
     const [subsName, setSubsName] = useState("")
+    const router = useRouter()
 
     const setDelayModAddressAndIncremeentState = (address: `0x${string}`) => {
         setDelayModAddress(address)
@@ -82,7 +84,7 @@ const CreatePage = () => {
                     <Step3 onPaymentDone={() => setStep((prev) => prev + 1)} delayModAddress={delayModAddress ?? '0x0'} />
                 }
                 {step === 4 &&
-                    <Step4/>
+                    <Step4 subName={subsName} onSubsDone={()=>router.push("/result")}/>
                 }
             </div>
         </div>

@@ -3,6 +3,7 @@ import Dropdown from "@/components/Dropdown";
 import { useEffect, useState } from "react";
 import { arbitrumNova } from "viem/chains";
 import { useSwitchChain } from "wagmi";
+import SubscriptionOptions from "./SubscriptionOptions";
 
 type Step1Param = {
     onStepDone: () => void
@@ -29,6 +30,7 @@ const Step1 = ({ onStepDone, onSubNameChange }: Step1Param) => {
                     onChange={(e) => {setSubsName(e.target.value); onSubNameChange(e.target.value)}}
                 />
             </label>
+            <SubscriptionOptions/>
             {subsName.length > 3 && <CustomButton onClick={onStepDone} text="Next" />}
         </div>
     )
