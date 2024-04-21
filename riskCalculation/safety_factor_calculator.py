@@ -5,11 +5,11 @@ def calculate_safety_factor(total_staked, average_operator_cost, number_of_opera
     return CoC, PfC, SF
 
 if __name__ == "__main__":
-    import sys
-    total_staked = float(sys.argv[1])
-    average_operator_cost = float(sys.argv[2])
-    number_of_operators = int(sys.argv[3])
-    potential_profit_from_corruption = float(sys.argv[4])
+    import os
+    total_staked = float(os.environ['TOTAL_STAKED'])
+    average_operator_cost = float(os.environ['AVERAGE_OPERATOR_COST'])
+    number_of_operators = int(os.environ['NUMBER_OF_OPERATORS'])
+    potential_profit_from_corruption = float(os.environ['POTENTIAL_PROFIT_FROM_CORRUPTION'])
 
     coc, pfc, sf = calculate_safety_factor(total_staked, average_operator_cost, number_of_operators, potential_profit_from_corruption)
     print(f"Cost of Corruption: {coc}")
